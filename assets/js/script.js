@@ -31,20 +31,23 @@ $(document).ready(function() {
         })
 
         $('.nav_dismess, .overlay, .sidebar .nav-menu a').click(function(){
-            $('.sidebar, .overlay,').removeClass('slide_sidebar');
+            $('.sidebar, .overlay').removeClass('slide_sidebar');
         })
 
-    //==== Nav Menu Slider 
+    //==== Nav Menu Slider End
     
 
     // ==== Section Select Start
-    $('.nav-menu a[href^="#"],').on('click', function(e) {
+    $('.nav-menu a[href^="#"]').on('click', function(e) {
         e.preventDefault();
         var target = $(this.hash);
+        
         if (target.length) {
+            var offset = $(window).width() < 768 ? 50 : 70;
+    
             $('html, body').animate({
-                scrollTop: target.offset().top - 70 
-            }, 800);
+                scrollTop: target.offset().top - offset 
+            }, 1000);
         }
     });
     // ==== Section Select End
