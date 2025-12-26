@@ -10,7 +10,7 @@ body{
     height: auto;
     background-color: #11071F;
     font-family: calc(--primary-font);
-    overflow-x: hidden;
+    overflow: hidden;
 }
 
 .container{
